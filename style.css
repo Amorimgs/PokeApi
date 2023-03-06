@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Press+Start+2P&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #9e6700;
+  height: 100vh;
+  font-family: 'Press Start 2P', cursive;
+}
+.start {
+  position: fixed;
+  cursor: pointer;
+  top: 50%;
+  left: calc(50% - 165px);
+  font-size: 66px;
+  color: #f7f305;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #2a6fb3;
+}
+.start:hover {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: Start;
+  animation-duration: 1s;
+}
+@keyframes Start {
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.game {
+  visibility: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0;
+}
+
+@keyframes ApareceGame {
+  to {
+    opacity: 100%;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  color: #f7f305;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #2a6fb3;
+}
+.contador {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+}
+.contador p {
+  background-color: #2a6fb3;
+  color: #f7f305;
+  width: 35%;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.container {
+  background-color: antiquewhite;
+  width: 800px;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0 30px black;
+  border-radius: 10px;
+  margin: 30px;
+}
+.fotoPokemon {
+  width: 40%;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: MovimentoPokemon;
+  animation-duration: 3s;
+  filter: drop-shadow(0 0 5px #000);
+}
+
+@keyframes MovimentoPokemon {
+  50% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.btn {
+  font-family: 'Press Start 2P', cursive;
+  width: 80%;
+  height: 15%;
+  cursor: pointer;
+  border-radius: 15px;
+  font-size: 18px;
+  background-color: #2a6fb3;
+  color: #f7f305;
+  text-transform: capitalize;
+}
+.btn:hover {
+  background-color: #f7f305;
+  color: #2a6fb3;
+  font-size: 20px;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: sp;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 40%;
+}
+
+.Resposta {
+  width: 500px;
+  height: 250px;
+  padding: 20px;
+  background-color: #2a6fb3;
+  position: fixed;
+  top: 40%;
+  left: calc(50% - 250px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #f7f305;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.btnNovoPokemon {
+  font-family: 'Press Start 2P', cursive;
+  width: 80%;
+  height: 15%;
+  cursor: pointer;
+  border-radius: 15px;
+  font-size: 18px;
+  background-color: #2a6fb3;
+  color: #f7f305;
+  text-transform: capitalize;
+}
+.btnNovoPokemon:hover {
+  background-color: #f7f305;
+  color: #2a6fb3;
+  font-size: 20px;
+}
+
+.relatorio {
+  background-color: antiquewhite;
+  height: 300px;
+  width: 300px;
+
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 30px black;
+  opacity: 0;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.relatorio li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .contador p,
+  .btn {
+    font-size: 14px;
+  }
+  .game {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .container,
+  .contador {
+    width: 100%;
+    margin-top: 20px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .contador p {
+    width: 45%;
+    padding: 5px;
+  }
+}
+
+.relatorio {
+  text-align: center;
+}
+
+.relatorio h3 {
+  margin-bottom: 10px;
+}
